@@ -6,7 +6,7 @@ This repository accompanies the paper submitted to the [INFORMS Journal on Compu
 
 The software and data in this repository are a snapshot of the software and data that were used in the research reported on the paper *papertitle DOI link* by Feilong Wang, Renata Mansini, Alice Raffaele, Filippo Ranza, and Roberto Roberti.
 
-## 1. Citation
+## Cite
 
 If you use this repository or the accompanying paper in your work, please cite both the paper and this repository using their respective DOIs.
 
@@ -17,7 +17,11 @@ BibTeX for citing this snapshot of the repository:
 
 <!-- TODO: Insert BibTeX here -->
 
-## 2. Requirements
+## Description
+
+This repository provides the implementation of our algorithms to reproduce the computational results reported in the paper. The software allows users to solve the **Submodular Knapsack Problem (SMKP)**.
+
+## Requirements
 
 The algorithms are compiled and executed in a Linux (Ubuntu) environment with **GCC 13.3**, **CMake 3.28**, and **Gurobi 12.0.1**. Please ensure that the following dependencies are installed before compilation:
 
@@ -27,11 +31,7 @@ CMake   # version 3.21 or higher
 Gurobi  # version 12.0 or higher
 ```
 
-## 3. Description
-
-This repository provides the implementation of our algorithms to reproduce the computational results reported in the paper. The software allows users to solve the **Submodular Knapsack Problem (SMKP)**.
-
-## 3.1 Building
+## Building
 
 The code is designed for **Linux** environments. 
 
@@ -59,9 +59,7 @@ set(GRB_LICENSE_FILE /path/to/your/gurobi/license)
 target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurobi120 with your installed version (e.g., gurobi110 version)
 ```
 
-
-
-## 3.2 Running the Software
+## Data and Replication
 
  The executable requires command-line arguments. There are **3 parameters in total** (two mandatory and one optional):
 
@@ -71,11 +69,12 @@ target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurob
 -m   <Gurobi>   # solution method (optional, default: DP for SMKP)
 ```
 
-Users can use the "runAll.sh" shell file in the *build* folder to run all instances.
+Users can use the "runAll.sh" shell file in the *build* folder to run all instances available in the `data` folder .
+All detailed results are provided in an Excel file in the `results` folder.
 
-## 3.3 Example Commands
+## Example Commands
 
-Solve SMKP (Ryu and Park (2021) [[1]](#ref1)  instances):
+Solve SMKP:
 
 ```bash
 cd build
@@ -89,9 +88,7 @@ cd build
 ./SMKP -i path/to/the/input/file -o path/to/the/output/file -m Gurobi
 ```
 
-
-
-## 3.4 Example outputs
+## Example Outputs
 
 **SMKP with DP**
 
@@ -124,9 +121,4 @@ Best objective 2.225600000000e+04, best bound 2.225600000000e+04, gap 0.0000%
 The optimal objective value is :22256
 The solution time is :2.51661
 The total number of chosen items is: 451
-```
-
-
-## Reference
-
-<a id="ref1">[1]</a> Ryu, J., & Park, S. (2021). Robust solutions for stochastic and distributionally robust chance-constrained binary knapsack problems. *arXiv preprint arXiv:2105.11875*. ([ https://doi.org/10.48550/arXiv.2105.11875](https://doi.org/10.48550/arXiv.2105.11875)).  
+``` 
