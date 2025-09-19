@@ -63,7 +63,7 @@ target_link_libraries(SMKMP PRIVATE gurobi_c++ gurobi120 pthread) # Replace guro
 
 ## 3.2 Running the Software
 
- The executable requires command-line arguments. There are **8 parameters in total**, three mandatory and five optional:
+ The executable requires command-line arguments. There are **3 parameters in total**, three mandatory and five optional:
 
 ```makefile
 -i   <file>   # input .txt file (mandatory)
