@@ -7,10 +7,10 @@ set(CMAKE_C_STANDARD 17)  # or 11, 17, etc.
 set(CMAKE_C_STANDARD_REQUIRED True)
 
 # Specify the path of the Gurobi solver
-set(GUROBI_HOME /mnt/c/Users/Daniel/ubuntu/gurobi1201/linux64) #change according to user's own gurobi path
+set(GUROBI_HOME /path/to/Gurobi/) #change according to user's own gurobi path
 include_directories(${GUROBI_HOME}/include)
 link_directories(${GUROBI_HOME}/lib)
-set(GRB_LICENSE_FILE /mnt/c/Users/Daniel/ubuntu/gurobi1201/gurobi.lic) #chage according to user's own gurobi license
+set(GRB_LICENSE_FILE /path/to/Gurobi/license) #chage according to user's own gurobi license
 
 #list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 #set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -42,7 +42,7 @@ add_executable(SMKP
     
     ${SOURCE_DIR}/main.cpp)
 # Add the Gurobi library
-target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread)
+target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) #Specify you own Gurobi version number
 
 # Set the output directories for object files and the executable
 set_target_properties(SMKP PROPERTIES
