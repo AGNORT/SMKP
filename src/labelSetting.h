@@ -184,19 +184,8 @@ void JgeDominance(
 
 int FKP(const Instance* RESTRICT const inst,
 	DblMatrix* RESTRICT const output,
-	int binCapacity,
 	const std::vector<double>& weightRec,
 	bool dualFlag);
 
-int SolveCompactPricingModel(
-	std::vector<Bin*>& newCols,
-	std::ofstream& outPut,
-	double& preTime,
-	double& binNumDual,
-	std::vector<double>& preciseDuals
-);
-
-// call the gurobi solver to solve the compact SMBP model
-int SolveCompactSMBPModel(Args& args, double binLB, int binUB);
 
 #endif

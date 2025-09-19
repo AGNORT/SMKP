@@ -123,7 +123,6 @@ std::string JoinVector(const std::vector<int>& vec) {
 
 int FKP(const Instance* RESTRICT const inst,
 	DblMatrix* RESTRICT const output,
-	int binCapacity,
 	const vector<double>& weightRec,
 	bool dualFlag) {
 
@@ -823,7 +822,7 @@ int LabelSettingSolveKnapsack(Args& args) {
 			dm_set(&ub_matr, i, j, INFINITY);
 		}
 	}
-	FKP(&g_instance, &ub_matr, g_instance.capacity + 1, weightRec, false);//mask completion bound
+	FKP(&g_instance, &ub_matr, weightRec, false);//mask completion bound
 	auto LR_endTime = chrono::high_resolution_clock::now();
 
 	/*use the heuristic labeling algorithm to get better lower bound*/
