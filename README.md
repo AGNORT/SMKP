@@ -69,8 +69,8 @@ target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurob
 -m   <Gurobi>   # solution method (optional, default: DP for SMKP)
 ```
 
-Users can use the "runAll.sh" shell file in the *build* folder to run all instances available in the `data` folder .
-All detailed results are provided in an Excel file in the `results` folder.
+All instances are available in the `data` folder .
+All detailed results are provided in an Excel file in the `results` folder, where we also uploaded tables and figures reported in the manuscript.
 
 ## Example Commands
 
