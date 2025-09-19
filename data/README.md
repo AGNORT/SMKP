@@ -1,24 +1,24 @@
-## Description of Instances
+## Instances
 
-Two sets of benchmark instances are used in this paper to test the proposed algorithms:
+We used two sets of benchmark instances to test our exact method:
 
-1. **Monaci et al. (2013):**[[1]](#ref1) Instances for SMKP.
-2. **Ryu and Park (2021):** [[2]](#ref2)Additional instances for SMKP, generated following their method.
+1. Monaci.zip: derived from the original instances by Monaci et al. (2013) [[1]](#ref1) for the Robust Knapsack Problem.
+2. RyuPark.zip: generated according to the instructions provided by Ryu and Park (2021) [[2]](#ref2).
 
-All instances share the same format, organized according to the following rules:
+All instances share the same following format:
 
 - **First line:**
-   Contains three values:
-  - The number of items (*n*),
-  - The bin capacity,
+  Three values:
+  - The number of items (*n*);
+  - The bin capacity;
   - The confidence level.
 - **Next *n* lines:**
-   Each line corresponds to one item and contains three parameters:
-  - Profit of the item (used only in SMKP),
-  - Average weight of the item,
-  - Weight variance of the item.
+   Each line corresponds to one item and contains its three parameters:
+  - Profit;
+  - Nominal weight;
+  - Submodular weight.
 
-## Reference
+## References
 
 <a id="ref1">[1]</a> Monaci, M., Pferschy, U., & Serafini, P. (2013). Exact solution of the robust knapsack problem. *Computers & operations research*, *40*(11), 2625-2631. (https://doi.org/10.1016/j.cor.2013.05.005).  
 
