@@ -1,10 +1,10 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# An efficient exact algorithm for the submodular knapsack problem
+# An Exact Method for the Submodular Knapsack Problem
 
 This repository accompanies the paper submitted to the [INFORMS Journal on Computing (IJOC)](https://pubsonline.informs.org/journal/ijoc). All source code is released under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data that were used in the research reported on the paper *paper DOI link* by Feilong Wang, Filippo Ranza, Alice Raffaele, Roberto Roberti, and Renata Mansini.
+The software and data in this repository are a snapshot of the software and data that were used in the research reported on the paper *papertitle DOI link* by Feilong Wang, Renata Mansini, Alice Raffaele, Filippo Ranza, and Roberto Roberti.
 
 ## 1. Citation
 
@@ -29,7 +29,7 @@ Gurobi  # version 12.0 or higher
 
 ## 3. Description
 
-This repository provides the implementation of our algorithms to reproduce the computational results reported in the paper. The software allows users to solve both the **Submodular Knapsack Problem (SMKP)** and the **Submodular Bin Packing Problem (SMBP)**
+This repository provides the implementation of our algorithms to reproduce the computational results reported in the paper. The software allows users to solve the **Submodular Knapsack Problem (SMKP)**.
 
 ## 3.1 Building
 
@@ -50,20 +50,20 @@ cmake ..
 make
 ```
 
-This will generate the executable `SMKMP` in the `build` directory. Since we use Gurobi as the commercial solver, the users need to change the path related to the Gurobi solver in the CMakeLists.txt.
+This will generate the executable `SMKP` in the `build` directory. Since we use Gurobi as the commercial solver, users need to change the path related to the Gurobi solver in the CMakeLists.txt.
 
 ```makefile
 # Set Gurobi paths (modify according to your installation)
 set(GUROBI_HOME /path/to/your/gurobi/library)
 set(GRB_LICENSE_FILE /path/to/your/gurobi/license)
-target_link_libraries(SMKMP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurobi120 with your installed version (e.g., gurobi110 )version
+target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurobi120 with your installed version (e.g., gurobi110 version)
 ```
 
 
 
 ## 3.2 Running the Software
 
- The executable requires command-line arguments. There are **3 parameters in total**, three mandatory and five optional:
+ The executable requires command-line arguments. There are **3 parameters in total** (two mandatory and one optional):
 
 ```makefile
 -i   <file>   # input .txt file (mandatory)
@@ -71,11 +71,11 @@ target_link_libraries(SMKMP PRIVATE gurobi_c++ gurobi120 pthread) # Replace guro
 -m   <Gurobi>   # solution method (optional, default: DP for SMKP)
 ```
 
-The "-i" and "-o" are mandatory parameters, "-m" is a optional parameter. The users can also use the "runAll.sh" shell file in the *build* folder to run all instances.
+Users can use the "runAll.sh" shell file in the *build* folder to run all instances.
 
 ## 3.3 Example Commands
 
-Solve SMKP (Ryn Park. (2021) [[1]](#ref1)  instances):
+Solve SMKP (Ryu and Park (2021) [[1]](#ref1)  instances):
 
 ```bash
 cd build
@@ -86,7 +86,7 @@ Solve SMKP with Gurobi:
 
 ```bash
 cd build
-./SMKMP -i path/to/the/input/file -o path/to/the/output/file -m Gurobi
+./SMKP -i path/to/the/input/file -o path/to/the/output/file -m Gurobi
 ```
 
 
