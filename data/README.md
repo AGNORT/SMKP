@@ -2,8 +2,8 @@
 
 We used two sets of benchmark instances to test our exact method:
 
-1. Monaci.zip: derived from the original instances by Monaci et al. (2013) [[1]](#ref1) for the Robust Knapsack Problem.
-2. RyuPark.zip: generated according to the instructions provided by Ryu and Park (2021) [[2]](#ref2).
+1. **Monaci.zip**: derived from the original instances by Monaci et al. (2013) [[1]](#ref1) for the Robust Knapsack Problem.
+2. **RyuPark.zip**: generated according to the instructions provided by Ryu and Park (2021) [[2]](#ref2).
 
 All instances share the same following format:
 
