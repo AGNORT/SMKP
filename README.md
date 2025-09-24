@@ -23,7 +23,7 @@ This repository provides the implementation of our algorithms to reproduce the c
 
 ## Requirements
 
-The algorithms are compiled and executed in a Linux (Ubuntu) environment with **GCC 13.3**, **CMake 3.28**, and **Gurobi 12.0.1**. Please ensure that the following dependencies are installed before compilation:
+The algorithms are compiled and executed on a machine Intel(R) Xeon(R) CPU E3-1220 V2 @ 3.10GHz, 14GB of RAM, running Fedora Linux 37 environment, with **GCC 13.3**, **CMake 3.28**, and **Gurobi 12.0.1**. Please ensure that the following dependencies are installed before compilation:
 
 ```bash
 GCC     # version 12 or higher
