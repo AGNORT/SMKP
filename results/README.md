@@ -9,7 +9,7 @@
 
 ## 2. Figures
 
-- Figure 1 in Section 3.5: Numerical example of the local dominance check by assuming 𝜌 = 0.1 and 𝜃 = 1 and considering four labels 𝐿1, 𝐿2, 𝐿3, and 𝐿4. The comparison between 𝐿1 and 𝐿2 discards label 𝐿2. Even though 𝐿1 dominates 𝐿4, the comparison is not made, and both labels are propagated – along with 𝐿3 that is not dominated, nor does it dominate 𝐿1 and 𝐿4
+- Figure 1 in Section 3.5: Numerical example of the local dominance check by assuming 𝜌 = 0.1 and 𝜃 = 1 and considering four labels L1, L2, L3, and L4. The comparison between L1 and L2 discards label L2. Even though L1 dominates L4, the comparison is not made, and both labels are propagated – along with L3 that is not dominated, nor does it dominate L1 and L4
 - Figure 2 in Section 4.1:  Results on the 5000-item instances of Monaci et al. (2013): (a) performance profile of the time ratio between our method and GuRoBi; (b) breakdown of the time spent by the different phases of the algorithm; (c) box plots of the solving time of our method on the five classes of instances
 - Figure 3 in Section 4.2: Sensitivity analysis on Monaci et al. (2013) instances with 5000 items
 - Figure 4 in Section 4.3: Performance profile on the Ryu and Park (2021) instances
