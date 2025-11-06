@@ -1,16 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
 
 # Set the project name
-project(SM_KP)
+project(S_KP)
 
 set(CMAKE_C_STANDARD 17)  # or 11, 17, etc.
 set(CMAKE_C_STANDARD_REQUIRED True)
 
 # Specify the path of the Gurobi solver
-set(GUROBI_HOME /path/to/Gurobi/) #change according to user's own gurobi path
+set(GUROBI_HOME /mnt/c/Users/Daniel/ubuntu/gurobi1201/linux64) #change according to user's own gurobi path
 include_directories(${GUROBI_HOME}/include)
 link_directories(${GUROBI_HOME}/lib)
-set(GRB_LICENSE_FILE /path/to/Gurobi/license) #chage according to user's own gurobi license
+set(GRB_LICENSE_FILE /mnt/c/Users/Daniel/ubuntu/gurobi1201/gurobi.lic) #chage according to user's own gurobi license
 
 #list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR})
 #set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -29,7 +29,7 @@ link_directories($ENV{GUROBI_HOME}/lib)
 set(SOURCE_DIR ${CMAKE_SOURCE_DIR}/src)
 
 # Add the executable
-add_executable(SMKP 
+add_executable(SKP 
     ${SOURCE_DIR}/macros.h
     ${SOURCE_DIR}/ts_config.h
     ${SOURCE_DIR}/item.h ${SOURCE_DIR}/item.c
@@ -42,10 +42,10 @@ add_executable(SMKP
     
     ${SOURCE_DIR}/main.cpp)
 # Add the Gurobi library
-target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) #Specify you own Gurobi version number
+target_link_libraries(SKP PRIVATE gurobi_c++ gurobi120 pthread) #Specify you own Gurobi version number
 
 # Set the output directories for object files and the executable
-set_target_properties(SMKP PROPERTIES
+set_target_properties(SKP PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}
@@ -58,4 +58,4 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fsanitize=address -fno-omit-frame-pointer")
 # target_compile_options(knapsack PRIVATE -Wall -Wextra -Wpedantic -g -ggdb -O0)
-target_compile_options(SMKP PRIVATE -w -Wextra -Wpedantic -O3 -g -ggdb)
+target_compile_options(SKP PRIVATE -w -Wextra -Wpedantic -O3 -g -ggdb)

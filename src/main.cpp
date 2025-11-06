@@ -11,8 +11,8 @@ int main(int argc, char** argv) {
 	Args args = { 0 };
 	parse_args(&args, argc, argv);
 
-	/**********Solve SMKP*******/
-	cout << "Solve SMKP use ";
+	/**********Solve SKP*******/
+	cout << "Solve SKP use ";
 	if (strcmp(args.method, "DP") == 0) {
 		cout << "DP!" << endl;
 		//call labelsetting algorithm to solve the submodular knapsack problem
