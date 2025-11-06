@@ -17,5 +17,5 @@
 
 ## 3. Detailed computational results
 
-The detailed computational results are provided in the Excel file "[SMKP_detailed-results.xlsx](https://github.com/AGNORT/SMKP/blob/main/results/SMKP_detailed-results.xlsx)".
+The detailed computational results are provided in the Excel file "[SKP_detailed-results.xlsx](https://github.com/AGNORT/SKP/blob/main/results/SKP_detailed-results.xlsx)".
 

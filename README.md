@@ -19,7 +19,7 @@ BibTeX for citing this snapshot of the repository:
 
 ## Description
 
-This repository provides the implementation of our algorithms to reproduce the computational results reported in the paper. The software allows users to solve the **Submodular Knapsack Problem (SMKP)**.
+This repository provides the implementation of our algorithms to reproduce the computational results reported in the paper. The software allows users to solve the **Submodular Knapsack Problem (SKP)**.
 
 ## Requirements
 
@@ -50,13 +50,13 @@ cmake ..
 make
 ```
 
-This will generate the executable `SMKP` in the `build` directory. Since we use Gurobi as the commercial solver, users need to change the path related to the Gurobi solver in the CMakeLists.txt.
+This will generate the executable `SKP` in the `build` directory. Since we use Gurobi as the commercial solver, users need to change the path related to the Gurobi solver in the CMakeLists.txt.
 
 ```makefile
 # Set Gurobi paths (modify according to your installation)
 set(GUROBI_HOME /path/to/your/gurobi/library)
 set(GRB_LICENSE_FILE /path/to/your/gurobi/license)
-target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurobi120 with your installed version (e.g., gurobi110 version)
+target_link_libraries(SKP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurobi120 with your installed version (e.g., gurobi110 version)
 ```
 
 ## Data and Replication
@@ -66,7 +66,7 @@ target_link_libraries(SMKP PRIVATE gurobi_c++ gurobi120 pthread) # Replace gurob
 ```makefile
 -i   <file>   # input .txt file (mandatory)
 -o   <file>   # output .txt file (mandatory)
--m   <Gurobi>   # solution method (optional, default: DP for SMKP)
+-m   <Gurobi>   # solution method (optional, default: DP for SKP)
 ```
 
 All instances are available in the `data` folder .
@@ -74,26 +74,26 @@ All detailed results are provided in an Excel file in the `results` folder, wher
 
 ## Example Commands
 
-Solve SMKP:
+Solve SKP:
 
 ```bash
 cd build
-./SMKP -i path/to/input.txt -o path/to/output.txt
+./SKP -i path/to/input.txt -o path/to/output.txt
 ```
 
-Solve SMKP with Gurobi:
+Solve SKP with Gurobi:
 
 ```bash
 cd build
-./SMKP -i path/to/the/input/file -o path/to/the/output/file -m Gurobi
+./SKP -i path/to/the/input/file -o path/to/the/output/file -m Gurobi
 ```
 
 ## Example Outputs
 
-**SMKP with DP**
+**SKP with DP**
 
 ```
-Solve SMKP use DP!
+Solve SKP use DP!
 
 heuristic labeling get lower bound: 22256
 heuristic labeling use time: 0.65s
@@ -111,10 +111,10 @@ The number of non-dominated labels is: 4
 The number of CB fathomed labels is: 1254
 The number of dominated labels is: 15488946
 ```
-**SMKP with Gurobi**
+**SKP with Gurobi**
 
 ```
-Solve SMKP use Gurobi!
+Solve SKP use Gurobi!
 Optimal solution found (tolerance 1.00e-06)
 Best objective 2.225600000000e+04, best bound 2.225600000000e+04, gap 0.0000%
 ***************The results obtained by Gurobi**************
